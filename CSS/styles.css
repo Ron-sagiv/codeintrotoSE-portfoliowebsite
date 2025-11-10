@@ -1,0 +1,447 @@
+/* 
+background colors options: 
+sea shel #FFF5EE
+misty rose #FFE4E1 +++
+#F4CCCC
+
+text color:
+midnight blue #191970 +++
+navy blue #000080 +++
+seagreen #2E8B57
+solid green
+
+font:
+original surfer
+ricopalm for headlines
+different font for headlines and text
+*/
+
+
+@font-face {
+    font-family: 'ricopalm';
+    src: url('/fonts/ricopalm.3d-extrude.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #FFF5EE;
+    font-family: original surfer;
+    font-weight: 400;
+    line-height: 1;
+    font-variant: small-caps;
+    /* color: #191970; */
+    color: #473015;
+    text-align: center;
+}
+
+h1 {
+    font-family: ricopalm;
+
+    line-height: 0.5;
+}
+
+a {
+    color: #357b70;
+}
+
+a:visited {
+    /* visited link */
+    color: #05676e;
+}
+
+a:hover,
+a:focus {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+}
+
+a:active {
+    /* selected link */
+    color: #489c79;
+}
+.nav-link {
+  color: #473015;
+  background-color: transparent;
+  padding: 8px 16px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #473015;
+  color: #fff;
+}
+
+ /* -----start 2nd button configuration---- */
+.button, button{
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    display: inline-block;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the button */
+    background-color: #357b70;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /* width of the border, type, color */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    /* transition-duration: 0.2s;
+    transition-property: opacity;  */
+    transition: opacity 0.3s;
+}
+button:hover,
+button:focus,
+.button:hover,
+.button:focus{
+  /* lets the mouse appear as a hand when hovering over the button */ 
+  cursor: pointer;
+   /* reduces the opacity of the button to 80% */
+   opacity: 0.8;
+}
+.button:visited{
+    color: antiquewhite;
+}
+ /* -----end 2nd button configuration---- */
+
+.navigation-list__item--active {
+    text-decoration: none;
+}
+
+.profile__portrait {
+    float: left;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile {
+    /* max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 30px;
+}
+
+@media only screen and (max-width: 950px) {
+    .profile__portrait {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* .project-list {
+        grid-template-columns: 1fr 1fr !important;
+    } */
+}
+
+@media only screen and (max-width: 750px) {
+    .profile__portrait {
+        width: 230px;
+        height: 230px;
+    }
+
+    .profile {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.contact_list {
+    list-style: none;
+}
+
+.contact_list>li {
+    margin-bottom: 15px;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 80vh;
+    /* adjust it if needed */
+}
+
+.form_container {
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: unset;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.form-item {
+    padding: 3px;
+}
+
+.form-item_first-and-last-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.page-header__item {
+    flex: 0 1 200px;
+}
+
+.logo {
+    border-radius: 30px;
+}
+
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.navigation-list {
+    list-style-type: none;
+}
+
+.navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.skill_table {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+/* start grid fallback */
+.grid__item {
+    display: inline-block;
+    width: 33%;
+}
+
+/* end grid fallback */
+
+@supports (display: grid) {
+    .grid {
+        display: grid;
+        /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        margin: 0;
+    }
+
+    .project-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-rows: 300px 300px; */
+        grid-gap: 20px;
+        padding: 0 20px;
+    }
+
+    .grid__item {
+        background-color: white;
+        padding: 10px;
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        /* start hover addition fron chatgpt */
+/* added only what's necessary for overlay + hover */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+    }
+.grid__item:hover {
+  transform: scale(1.05);
+}
+
+/* overlay effect */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.1rem;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.3s ease;
+}
+/* overlay text background for readability */
+.overlay p {
+  background-color: #767676; /* 👈 new background for text */
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.grid__item:hover .overlay {
+  opacity: 1;
+  /* pointer-events: auto; */
+}
+
+/* end hover addition fron chatgpt */
+    
+}
+
+/* } this is the closing } of the @supports */
+
+@media all and (max-width: 750px){
+  /* shared code */
+}
+
+@media all and (max-width: 500px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .project-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .project-list {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@keyframes color-change {
+    /* from{
+        fill: #edc655;
+    }
+    to {
+        fill: #f76414;
+    } */
+     0% {
+        fill:#edc655;
+     }
+     50% {
+        fill:#fcffad;
+     }
+     75% {
+        fill:#f76414
+     }
+     100%{
+        fill:red;
+     }
+}
+.sun{
+    /* animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear; */
+    animation: 4s color-change infinite alternate linear;
+}
+@keyframes cloud-move{
+    0%{
+        transform: translate(0.50px);
+    }
+    100%{
+        transform: translate(500px, 50px);
+    }
+}
+.cloud-front{
+    /* why 2 animations are not working? */
+    /* animation-name: cloud-move, color-change;
+    animation-duration: 30s, 5s;
+    animation-iteration-count: infinite, infinite;
+    animation-direction: alternate, alternate;
+    animation-timing-function: linear, linear; */
+   animation: 30s cloud-move infinite alternate linear; 
+}
+@keyframes cloud-move-reverse{
+    0%{
+        transform: translate(446px, 48px);
+    }
+    100%{
+        transform: translate(100px, 48px);
+    }
+}
+.cloud-back{
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+
+@keyframes color-change-grass{
+    0%{
+        fill: #489c79;
+    }
+     20%{
+        fill: #229ac5;
+    }
+     40%{
+        fill: pink;
+    }
+     60%{
+        fill: orange;
+    }
+     80%{
+        fill: rgb(15, 105, 179);
+    }
+     100%{
+        fill: saddlebrown;
+    }
+}
+.grass{
+    animation: 15s color-change-grass infinite alternate linear;
+}
+@keyframes grow-shrink {
+  0%, 100% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.2); 
+  }
+}
+
+.horse-right {
+  animation: grow-shrink 5s ease-in-out infinite; 
+  transform-origin: center; 
+}
+.horse-right-frame{
+  animation: grow-shrink 5s ease-in-out infinite; 
+  transform-origin: center;   
+}
+.horse-left{
+   animation: grow-shrink 5s ease-in-out infinite; 
+  transform-origin: center; 
+}
+.horse-left-frame{
+   animation: grow-shrink 5s ease-in-out infinite; 
+  transform-origin: center; 
+}
+

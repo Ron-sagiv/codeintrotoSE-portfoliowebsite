@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ron Sagiv - Web Developer - Contact</title>
+    <link rel="shortcut icon" href="img/ron surf style favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/styles-production.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <img src="img/Logo surf.png" width="200" height="70" alt="logo" class="logo page-header__item">
+        <nav class="main-navigation page-header__item">
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation">
+                    <a href="index.html" role="menuitem" class="navigation-list__item nav-link">Home</a>
+                </li>
+                <li role="presentation">
+                    <a href="work.html" role="menuitem"
+                        class="navigation-list__item navigation-list__item nav-link">Work</a>
+                </li>
+                <li role="presentation">
+                    <a href="about.html" role="menuitem" class="navigation-list__item nav-link">About me</a>
+                </li>
+                <li role="presentation">
+                    <a href="contact.html" role="menuitem"
+                        class="navigation-list__item navigation-list__item--active nav-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="container">
+        <main>
+            <h1>Contact</h1>
+            <h2>Ron Sagiv</h2>
+            <p>
+                45 Somewhere street <br>
+                10222 Berlin <br>
+                <a
+                    href="mailto:notreal@email.com?bcc=alakata69@gmail.com&subject=Just%20wanted%20to%20say%20hallo&body=What%20is%20up%3F">Contact
+                    me</a>
+            </p>
+            <ul class="contact_list">
+                <li>
+                    <a href="mailto: notareal@email.com">notareal(at)email(dot)com</a>
+                </li>
+                <li>
+                    <a href="tel: +49 (0)546639007">Phone: (+49)0546639007</a>
+                </li>
+                <li>
+                    <a href="skype: notreal.skype">notreal.skype</a>
+                </li>
+            </ul>
+            <br><br>
+            <div class="form-container">
+                <form action="/contact-me-details" method="post">
+                    <h1>Stay in touch</h1>
+                    <div class="form-item form-item_first-and-last-name">
+                        <table>
+
+                            <tr>
+                                <td><label for="firstname">First name:</label></td>
+                                <td><label for="lastname">Last name:</label></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="text" name="firstname" id="firstname" required></td>
+                                <td><input type="text" name="lastname" id="lastname" required></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <br>
+                    <div class="form-item form-item_radio-input">
+                        <p>Are you a private person or a company?</p>
+                        <input type="radio" name="pp-or-co" id="private" value="Private">
+                        <label for="private">Private</label><br>
+                        <input type="radio" name="pp-or-co" id="company" value="Company">
+                        <label for="company">Company</label><br><br>
+                    </div>
+                    <div class="form-item form-item_email">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" required> <br>
+                    </div>
+                    <div class="form-item form-item_phone">
+                        <label for="phone">Phone number:</label>
+                        <input type="tel" name="phone" id="phone" required><br>
+                    </div>
+                    <div class="form-item form-item_hdyham">
+                        <label for="hdyham">How did you hear about me?</label>
+                        <select id="hdyham" name="hdyham" required>
+                            <option value="no answer" selected> </option>
+                            <option value="friend">A friend</option>
+                            <option value="coworker">A coworker</option>
+                            <option value="google">Google</option>
+                            <option value="advertisement">Advertisement</option>
+                            <br><br>
+                        </select>
+                    </div>
+                    <div class="form-item form-item_text">
+                        <label for="message">Leave a message (Max 200 characters)</label> <br><br>
+                        <textarea maxlength="200" name="message" id="message">Type your message here</textarea>
+                    </div>
+                    <br><br>
+                    <div class="form-item form-item_submit">
+                        <input type="submit">
+                    </div>
+                </form>
+            </div>
+
+
+        </main>
+    </div>
+    <footer>
+        <p>Find me on</p>
+        <a href="https://github.com/" target="_blank">
+            <img src="img/211904_social_github_icon.svg" width="30px" height="30px" alt="Github">
+        </a>
+        <a href="https://www.facebook.com/" target="_blank">
+            <img src="img/facebook logo_icon.svg" width="30px" height="30px" alt="Facebook">
+        </a>
+        <a href="https://de.linkedin.com/" target="_blank">
+            <img src="img/linkedin_media_people_icon.svg" width="30px" height="30px" alt="LinkedIn">
+        </a>
+        <address>
+            <a href="https://shorturl.at/y5iGy" target="_blank">Berlin</a>
+        </address>
+    </footer>
+
+    <script src="JS/tota11y.min.js"></script>
+</body>
+
+</html>
