@@ -56,11 +56,13 @@ a:active {
     /* selected link */
     color: rgba(72, 156, 121, 1);
 }
+
 .nav-link {
   color: rgba(71, 48, 21, 1);
   background-color: transparent;
   padding: 8px 16px;
   border-radius: 50%;
+  display: block;
   -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -69,6 +71,7 @@ a:active {
   background-color: rgba(71, 48, 21, 1);
   color: rgba(255, 255, 255, 1);
 }
+
 
  /* -----start 2nd button configuration---- */
 .button{
@@ -258,12 +261,15 @@ button:focus,
 
 .page-header__item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 200px;
-            flex: 0 1 200px;
+        -ms-flex: 0 1;
+            flex: 0 1;
+   /* original flex: 0 1 200px; */
 }
 
 .logo {
-    border-radius: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
 }
 
 .page-header__item:last-child {
