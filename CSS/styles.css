@@ -19,7 +19,7 @@ different font for headlines and text
 
 @font-face {
     font-family: 'ricopalm';
-    src: url('/fonts/ricopalm.3d-extrude.otf') format('opentype');
+    src: url('../fonts/ricopalm.3d-extrude.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
