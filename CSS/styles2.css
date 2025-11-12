@@ -21,7 +21,7 @@
 
 @font-face {
     font-family: 'ricopalm';
-    src: url('..fonts/ricopalm.3d-extrude.otf') format('opentype');
+    src: url('../fonts/ricopalm.3d-extrude.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -40,7 +40,7 @@ body {
 h1 {
     font-family: ricopalm;
 
-    line-height: 0.5;
+    line-height: 1.5;
 }
 
 a {
@@ -62,11 +62,13 @@ a:active {
     /* selected link */
     color: var(--color-teal-light);
 }
+
 .nav-link {
   color: var(--color-brown);
   background-color: transparent;
   padding: 8px 16px;
   border-radius: 50%;
+  display: block;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -74,6 +76,7 @@ a:active {
   background-color: var(--color-brown);
   color: var(--color-white);
 }
+
 
  /* -----start 2nd button configuration---- */
 .button, button{
@@ -210,11 +213,14 @@ button:focus,
 }
 
 .page-header__item {
-    flex: 0 1 200px;
+    flex: 0 1;
+   /* original flex: 0 1 200px; */
 }
 
 .logo {
-    border-radius: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
 }
 
 .page-header__item:last-child {
