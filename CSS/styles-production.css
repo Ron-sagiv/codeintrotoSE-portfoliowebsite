@@ -605,3 +605,12 @@ button:focus,
   -webkit-transform-origin: center; 
           transform-origin: center; 
 }
+/* form validation */
+.error-message {
+  color: red;
+  font-size: 0.8em;
+}
+label {
+  display: inline-block;
+  min-width: 75px;
+}
